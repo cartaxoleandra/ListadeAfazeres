@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .itens{
+            text-align: center;
+        }
+
+        #menu{
+            background-color: #d24d55;
+            color: rgba(94, 9, 41, 0.712);
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 200;
+        }
+        body{
+            margin-left: 20px; 
+            background-color: pink; }
+
+            h1{
+                color: rgba(94, 9, 41, 0.712);
+                text-decoration:underline;
+                
+            }
+
+        h2{
+            color: rgba(153, 10, 65, 0.712);
+            text-decoration: underline;
+            font-family: Verdana, Geneva, Tahoma, sans-serif ;
+        
+        }
+        h3{
+            color:rgb(99, 5, 21);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border: solid #ff04c9 2px;
+            display: block;
+            text-align: center;
+
+
+        }
+        #texto{
+            background-color: rgba(94, 9, 41, 0.712);
+            color: white;
+            border-radius: 5px;
+            height: 30px;
+            width: 100px;
+         }
+
+        #botao{
+            background-color: #d24d55;
+            color: black;
+            border-radius: 5px;
+            height: 30px;
+            width: 100px; }     
+    </style>
+</head>
+<body>   
+    <center><h1>Lista de Tarefas</h1></center>
+    <div id="menu">
+    <ul>
+       <li> <a href="cadastro.html" target="_blank">Cadastro</a> </li>
+    </ul>
+   </div>
+ 
+    <center><h2>Digite aqui</h2>
+    <input id="texto" placeholder="Escreva">
+    <button onclick="adicionar();" id="botao">Adicionar</button></center>
+    <script>
+
+        function adicionar()
+        {
+            const conteudo = document.getElementById('texto').value;
+            const novaH3 = document.createElement('h3');
+            const novoBotao = document.createElement('button');
+            const novaDiv = document.createElement("div");
+            novaDiv.className="itens";
+            novoBotao.innerHTML = "Excluir";
+            novoBotao.style.marginLeft = "47%";
+            
+            novaH3.innerHTML = conteudo;
+            
+            novaDiv.appendChild(novoBotao);
+            novaH3.addEventListener('click',function(){
+                novaH3.style.color = "pink";
+                novaH3.style.textDecoration = "line-through";
+            })
+            
+            novoBotao.addEventListener('click',function(){
+                novaH3.remove();
+                novoBotao.remove();
+            })
+
+            document.body.appendChild(novaH3);
+            document.body.appendChild(novoBotao);
+            document.getElementById('texto').value = "";
+            //window.alert(conteudo);
+        } 
+    </script>
+</body>
+</html>
