@@ -1,90 +1,192 @@
-img{
-   width: 15px;
-   height: 15px;
-}
-*{
-    box-sizing: border-box;
-    margin: 0;
+body{
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
-body {
-    width: 100%;
-    min-height: 100vh;
+    margin: 0;
     background:linear-gradient(90deg, #FF69B4 0% , #d24d55 50% , #FF1493 100%);
-    display: flex;
-    justify-content: center;
     align-items: center;
-
+    align-content: center;
+    text-align: center;
 }
-.container {
+
+div{
+    align-items: center;
+}
+
+h1{
+    padding: 1rem;
+    margin: 0;
+    background-color: #63c5da;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 40px;
+    color: black;
+}
+
+#conteudo {
+    display: none;
+}
+
+#cadastro_dados {
+    display: block;
+}
+
+#mostraDados {
+    display: none;
+}
+
+#texto{
+    font-family: Segoe UI, sans-serif;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    color: rgb(29,29,27);
+}
+
+#botao{
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-family: Segoe UI, sans-serif;
+    font-weight: bold;
+    background-color: #016064;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    border: none;
+    transition-duration: 0.3s;
+}
+
+#botao:hover{
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #701A11;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    border: none;
+}
+.tabela {
     background-color: #fafafa  ;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     width: 400px;
     max-width: 100%;
+    height: 400px;
     overflow: hidden;
+    padding-top: 10px;
 }
-.header {
-    background-color: #eee ;
-    padding: 20px;
-}
-.form {
-    padding: 20px;
-}
-.form-control {
-    margin-bottom: 10px;
-    padding-bottom: 20px;
-    position: relative;
-}
-.form-control label {
-    display: inline-block;
-    margin-bottom: 5px;
-}
-.form-control input {
-    border: 2px solid #f0f0f0 ;
-    display: block;
-    border-radius: 10px;
-    font-size: 14px;
-    width: 100%;
-    padding: 10px;
-}
-.form-control i {
-    position: absolute;
-    top: 43px ;
-    right: 10px;
-    visibility: hidden;
-}
-.form-control small {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    visibility: hidden;
-}
-.form button {
-    background-color: #FF1493;
-    border: 2px solid #FF1493;
-    color: #fff;
-    font-size: 14px;
-    width: 100%;
-    border-radius: 10px ;
-    padding: 10px;
-}
-/* Error and Success */
-.form-control.success input {
-    border-color: #2ecc71;
-}
-.form-control.error input {
-    border-color: #e74c3c;
-}
-.form-control.success i.correto {
-    visibility: visible;
 
+#menu-cabecalho{
+    font-family: Segoe UI, sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    pointer-events: visible;
+    background-color: #016064;
+    color: rgb(240,240,240);
 }
-.form-control.error i.errado {
-    visibility: visible;
+
+#menu-cabecalho ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    color: rgb(240,240,240);
+    font-size: 20px ;
+    margin-left: 37%;
 }
-.form-control.error small {
-    visibility: visible;
-    color: #e74c3c;
+
+#menu-cabecalho li{
+    float: left;
+    color: rgb(240,240,240);
+}
+
+#menu-cabecalho li a{
+    transition-duration: 0.3s;
+    display: block;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: rgb(240,240,240);
+}
+
+#menu-cabecalho li a:hover{
+    background-color: #FF69B4;
+    color: rgb(255,255,255);
+}
+
+#texto {
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+
+input:focus {
+    border-color: #5f5600;
+    outline: none;
+}
+
+#cadastro_dados input, label{
+    text-align: left;
+    align-self: left;
+    align-content: left;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Segoe Ui', sans-serif;
+    font-size: 15px;
+}
+
+#cadastro_dados input {
+    width: 15rem;
+    padding: 5px;
+    margin-bottom: 0.5rem;
+    align-content: left;
+}
+
+#cadastro_dados button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: #016064;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 700;
+    transition-duration: 0.3s;
+}
+
+#cadastro_dados button:hover {
+    background-color: #701A11;
+}
+#cadastro_dados span {
+    display: none;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 15px;
+    color: rgb(100, 7, 7);
+    font-weight: 700;
+    transition-duration: 0.3s;
+    transition-property: ease;
+}
+
+#mostraDados {
+    font-family: 'Segoe UI', sans-serif;
+    padding: 0;
+}
+
+#mostraLogin, #mostraNome, #mostraMail, #mostraSenha {
+    color: #B0291A;
+}
+
+button {
+    border-radius: 5px;
+    font-family: Segoe UI, sans-serif;
+    padding: 3px 5px;
+    font-weight: bold;
+    background-color: rgb(240,240,240);
+    color: rgb(29,29,27);
+    font-size: 15px;
+    border-style: solid;
+    margin: 0;
+}
+
+h2 {
+    margin-bottom: 0.2rem;
 }
